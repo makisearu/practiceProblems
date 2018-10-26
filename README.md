@@ -1,2 +1,2 @@
 # practiceProblems
-This is a repository for me to upload practice problems and projects as well as track my progress. 
+This is a repository of my practice problems and short projects to track progress. All code is written in python 3. 
