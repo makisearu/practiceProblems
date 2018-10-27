@@ -1,0 +1,23 @@
+"""
+compress a string
+'AAABBCCCD' to 'A3B2C3D1' (if the compressed version is shorter)
+
+"""
+
+def compress(word):
+    result = ''
+    num = 0
+    if word == None:
+        return None
+    for i in range(len(word)):
+        if i >= 1 and word[i-1] == word[i]:
+            num += 1
+        elif i >= 1 and word[i-1] != word[i]:
+            result += calc_partial(num, word, i)
+            num = 0
+        if i == len(word) - 1:
+            result += calc_partial(num, word, i)
+    return result if len(result) < len(word) else word
+
+def calc_partial(num, word, i):
+    return str(word[i-1]) + str(num + 1) 
