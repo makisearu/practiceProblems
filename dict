@@ -8,7 +8,8 @@ Then, the output should be:
 """
 def multdict(number):
     """
-    number must be a positive integer or 0 and a factorial will be returned
+    number must be an integer and a dictionary of 1 to the number of its squares 
+    will be returned
     """
     squared = {}
     for i in range(1, number+1):
